@@ -579,7 +579,8 @@ public class InstanceInfo implements ConfigurableInstanceInfo {
      * {@link InstanceInfo} JSON and XML format for port information does not follow the usual conventions, which
      * makes its mapping complicated. This class represents the wire format for port information.
      */
-    static class PortWrapper {
+    @Serdeable
+    public static class PortWrapper {
 
         private final boolean enabled;
         private final int port;
